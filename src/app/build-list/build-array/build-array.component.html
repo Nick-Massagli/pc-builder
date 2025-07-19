@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="row pad-left-right">
+      <span class="pull-left title">Builds</span>
+      <a class="btn btn-success pull-right" routerLink="new">Add Build</a>
+    </div>
+  </div>
+  <div class="panel-body">
+    <div class="center-panel">
+      <app-build-item *ngFor="let build of builds" [build]="build"></app-build-item>
+    </div>
+  </div>
+
+</div>

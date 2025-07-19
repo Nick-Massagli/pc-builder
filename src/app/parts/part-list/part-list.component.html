@@ -1,1 +1,15 @@
-<p>part-list works!</p>
+<div class="panel panel-default">
+    <div class="row">
+        <div class="panel-heading">
+            <a href="#" class="list-group-item clearfix">
+               <div class="pull-left">
+        <h4 class="list-group-item-heading">Parts</h4>
+            </div>
+            <div class="pull-right">
+                 <a class="pull-right btn btn-success" routerLink="new">New Part</a>
+            </div>
+</a>
+            <app-part-item *ngFor="let partItem of parts" [part]="partItem"></app-part-item>
+        </div>
+    </div>
+</div>

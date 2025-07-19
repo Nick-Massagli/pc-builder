@@ -1,1 +1,28 @@
-<p>build-edit works!</p>
+<div class="panel panel-default">
+	<div class="panel-body">
+		<form id="build-edit" #f="ngForm" (ngSubmit)="onSubmit(f)">
+			<div class="row">
+				<div class="col-sm-12 form-group">
+					<label for="name">Build Name</label>
+					<input #name="ngModel" name="name" type="text" id="name" class="form-control" size="120" max="120"
+						[ngModel]="originalBuild?.name" required>
+				</div>
+
+				<div class="col-sm-12 form-group">
+					<label for="parts">Build Parts</label>
+					<input name="parts" type="text" id="parts" class="form-control" size="120" max="255"
+						[ngModel]="originalBuild?.parts">
+                </div>
+
+			<div *ngIf="name.touched && !name.valid" class="alert alert-danger">
+				The Build Name is required!
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 btn-toolbar">
+					<button class="btn btn-success" type="submit" [disabled]="!f.valid">Save</button>
+					<button class="btn btn-primary" type="button" (click)="onCancel()">Cancel</button>
+				</div>
+			</div>
+
+	</div>

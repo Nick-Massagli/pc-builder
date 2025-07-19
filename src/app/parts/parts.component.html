@@ -1,1 +1,11 @@
-<p>parts works!</p>
+<div class="row">
+    <div class="col-md-5">
+        <app-part-list></app-part-list>
+    </div>
+    <div class="col-md-4">
+        <router-outlet></router-outlet>
+        <ng-template #infoText>
+            <p>Please Select a Part</p>
+        </ng-template>
+    </div>
+</div>
